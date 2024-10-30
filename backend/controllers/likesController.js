@@ -1,10 +1,10 @@
-import Like from '../models/Like.js';
+import { createLike } from "../services/likeService";
 
-export const createLike = async (req, res) => {
+export const createLikeController = async (res, req)=>{
     try {
-        const like = await Like.create(req.body);
-        res.status(201).json(like);
+        const post = await createLike(req.body);
+        res.status(201).json(post);
     } catch (error) {
         res.status(400).json({ error: error.message });
     }
-};
+}

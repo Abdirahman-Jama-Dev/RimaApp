@@ -1,8 +1,8 @@
-import Comment from "../models/Comment";
+import { createComment } from "../services/commentService";
 
-export const createComment= async (req, res) => {
+export const createCommentController = async (req, res) => {
     try {
-        const comment = await Comment.create(req.body);
+        const comment = await createComment(req.body);
         res.status(201).json(comment);
     } catch (error) {
         res.status(400).json({ error: error.message });

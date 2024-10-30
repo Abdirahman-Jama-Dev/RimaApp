@@ -1,8 +1,8 @@
-import Post from "../models/Post";
+import { createPost } from "../services/postService";
 
-export const createPost= async (req, res) => {
+export const createPostController= async (req, res) => {
     try {
-        const post = await Post.create(req.body);
+        const post = await createPost(req.body);
         res.status(201).json(post);
     } catch (error) {
         res.status(400).json({ error: error.message });
