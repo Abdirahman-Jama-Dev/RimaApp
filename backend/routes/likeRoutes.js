@@ -1,8 +1,8 @@
 import express from 'express';
-import { createLike } from '../controllers/likesController.js';
+import { createLikeController } from '../controllers/likesController.js';
 const router = express.Router();
 
-router.post('/', createLike);
+router.post('/', createLikeController);
 
 
 export default router;

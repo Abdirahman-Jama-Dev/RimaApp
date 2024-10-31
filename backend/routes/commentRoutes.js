@@ -1,8 +1,8 @@
 import express from 'express';
-import { createComment } from '../controllers/commentsController';
+import { createCommentController } from '../controllers/commentsController.js';
 const router = express.Router();
 
-router.post('/', createComment);
+router.post('/', createCommentController);
 
 
 export default router;

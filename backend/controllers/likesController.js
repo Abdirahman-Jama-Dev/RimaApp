@@ -1,4 +1,4 @@
-import { createLike } from "../services/likeService";
+import { createLike } from "../services/likeService.js";
 
 export const createLikeController = async (res, req)=>{
     try {
