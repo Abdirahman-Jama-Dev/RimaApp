@@ -18,7 +18,7 @@ sequelize.sync()
     .catch(err => console.log("Error: " + err));
 
 // Routes
-app.use('/auth',auth)
+app.use('/auth',authRoutes)
 app.use('/api/users', userRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/likes', likeRoutes);
